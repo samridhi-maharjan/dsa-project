@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    position: sticky;
+    top: 0px;
+}
+header .title{
+    background-color: #ffe4c4;
+    color: rgb(92, 92, 92);
+    text-align: center;
+    height: 100px;
+}
+header h2{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px;
+}
+.intro{
+    margin: 10px 300px 0px 300px;
+    display: block;
+}
+.intro h3{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.intro p{
+    text-align: justify;
+    font-size: 15px;
+    margin: 5px 0px;
+}
+.types{
+    margin: 20px 300px 0px 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.details{
+    display: block;
+    margin-right: 20px;
+    border: 1px solid peachpuff;
+    border-radius: 4px;
+    background-color: rgba(255, 139, 124, 0.226);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-width: 360px;
+}
+.details h4{
+    text-align: center;
+    margin-top: 3px;
+}
+.details p{
+    text-align: justify;
+    font-size: 12px;
+    margin: 5px 7px;
+}
+.details .btn{
+    text-align: center;
+    margin: 3px 0px 10px 0px;
+}
+.details .btn button{
+    padding: 3px 4px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    box-shadow:2px 3px rgba(109, 109, 109, 0.521);
+    cursor: pointer;
+}
+button:active{
+    transform:translateY(1px);
+}
+footer{
+    background-color:#ffe4c4 ;
+    height: 100px;
+    display: flex;
+    margin-top: 20px;
+    /* position: sticky; */
+    /* bottom: 0px; */
+}
+footer .list{
+    margin:10px 200px 10px 300px;
+    color: rgb(48, 48, 48);
+}
+footer .list a{
+    text-decoration: none;
+    color: rgb(92, 92, 92);
+    display: block;
+}
+footer .about{
+    margin:10px 300px 10px 200px;
+}
+footer .about h5{
+    color: rgb(48, 48, 48);
+} 
+footer .about li{
+    text-decoration: none;
+    color: rgb(92, 92, 92);
+    display: block;
+}
+
+.array-container {
+    display: flex;
+    align-items: flex-end;
+    margin: 20px;
+    width: 80%;
+    max-width: 800px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.number {
+    margin: 5px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.number.sorted {
+    background-color: #28a745;
+}
+.box{
+    margin: 20px 300px 0px 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.box .algorithm{
+    max-width: 400px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 2px 2px rgba(128, 128, 128, 0.315);
+}
+
+
