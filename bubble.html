@@ -9,15 +9,13 @@
 <body>
     <header>
         <div class="title">
-             <h2>
-                SORTING ALGORITHM VISUALIZER
-            </h2>
+            <a href="index.html"><h2>SORTING ALGORITHM VISUALIZER</h2></a>
         </div>
     </header>
     <div class="intro">
         <h3>BUBBLE SORT</h3>
         <p>
-            Quick sort is a highly efficient sorting algorithm that uses a divide-and-conquer approach. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot.
+            Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.Bubble sort repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process repeats until the list is sorted.
         </p>
     </div>
     <div class="box">
@@ -33,20 +31,44 @@
             </ol>
         </div>
         <div class="complexity">
-            <h4>complexity</h4>
+            <table>
+                <tr>
+                  <th><b>complexity</b></th>
+                  <th>Space</th>
+                  <th>Time</th>
+                </tr>
+                <tr>
+                  <td>Best</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Worst</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                    <td>Average</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+              </table>
         </div>
     </div>
     <div class="visual">
-        
+        <div class="visual-display">
+            <input type="number" id="size" placeholder="size of array">
             <input type="text" id="user-input" placeholder="Enter comma-separated values" />
             <div class="controls">
                 <button id="create">Set Array</button>
-                <button id="generate">Generate Array</button>
                 <button id="sort">Sort Array</button>
+                <button id="generate">Generate Array</button>
         </div>
-        <div class="array-container" id="array-container"></div>
+        <div class="container">
+            <div class="array-container" id="array-container"></div>
+        </div>
     </div>
-   
+    </div>
 <footer>
     <div class="list">
         <h5>

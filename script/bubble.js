@@ -3,12 +3,14 @@ const generateButton = document.getElementById('generate');
 const sortButton = document.getElementById('sort');
 const createButton = document.getElementById('create');
 const input= document.getElementById('user-input');
+const size=document.getElementById('size');
+
 
 
 let array = [];
 function createArray() {
-    const userValues = userInput.value.split(',').map(Number);
-    if (userValues.length > 0 && userValues.every(num => !isNaN(num))) {
+    const userValues = input.value.split(',').map(Number);
+    if (userValues.length > 0 && userValues<=size) {
         array = userValues;
         arrayContainer.innerHTML = '';
         array.forEach(value => {
@@ -39,22 +41,18 @@ async function bubbleSort() {
     for (let i = 0; i < array.length - 1; i++) {
         for (let j = 0; j < array.length - i - 1; j++) {
             if (array[j] > array[j + 1]) {
-                // Swap array elements
                 const temp = array[j];
                 array[j] = array[j + 1];
                 array[j + 1] = temp;
                 
-                // Swap number text
                 numbers[j].innerText = array[j];
                 numbers[j + 1].innerText = array[j + 1];
                 
-                // Highlight sorted numbers
                 numbers[j].classList.add('sorted');
                 numbers[j + 1].classList.add('sorted');
                 
                 await new Promise(resolve => setTimeout(resolve, 200));
                 
-                // Remove highlight after sorting
                 numbers[j].classList.remove('sorted');
                 numbers[j + 1].classList.remove('sorted');
             }
