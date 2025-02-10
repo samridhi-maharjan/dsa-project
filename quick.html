@@ -3,40 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radix Sort</title>
+    <title>Quick Sort</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="title">
-             <h2>
-                SORTING ALGORITHM VISUALIZER
-            </h2>
+            <a href="index.html"><h2>SORTING ALGORITHM VISUALIZER</h2></a>
         </div>
     </header>
     <div class="intro">
         <h3>QUICK SORT</h3>
         <p>
-            Quick sort is a highly efficient sorting algorithm that uses a divide-and-conquer approach. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot.
+            QuickSort is a sorting algorithm based on the Divide and Conquer that picks an element as a pivot and partitions the given array around the picked pivot by placing the pivot in its correct position in the sorted array.
         </p>
     </div>
     <div class="box">
         <div class="algorithm">
             <h4>Algorithm</h4>
+            <ol>
+                <li>Start with the first element in the array.</li>
+                <li> Compare the current element with the next element.
+                <li>If the current element is greater than the next element, swap them.</li>
+                <li>Move to the next element and repeat steps 2-3 until the end of the array is reached</li>
+                <li>After each pass through the array, the largest element in the unsorted portion of the array will be in its correct position.</li>
+                <li>Repeat steps 1-5 for the remaining unsorted portion of the array until no more swaps are needed.</li>
+            </ol>
         </div>
-        <div class="code">
-            <h4>Implementation using C</h4>
+        <div class="complexity">
+            <table>
+                <tr>
+                  <th><b>complexity</b></th>
+                  <th>Space</th>
+                  <th>Time</th>
+                </tr>
+                <tr>
+                  <td>Best</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Worst</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                    <td>Average</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+              </table>
         </div>
     </div>
-    
-
+    <div class="visual">
+        <div class="visual-display">
+            <input type="number" id="size" placeholder="size of array">
+            <input type="text" id="user-input" placeholder="Enter comma-separated values" />
+            <div class="controls">
+                <button id="create">Set Array</button>
+                <button id="sort">Sort Array</button>
+                <button id="generate">Generate Array</button>
+        </div>
+        <label for="speed">Sorting Speed :max</label>
+        <input type="range" id="speed" min="10" max="10000" value="200">min
+        <div class="container">
+            <div class="array-container" id="array-container"></div>
+        </div>
+    </div>
+    </div>
 <footer>
     <div class="list">
         <h5>
             Quick links
         </h5>
         <a href="#">Radix sort</a>
-        <a href="bubble.html">Bubble sort</a>
+        <a href="#">Bubble sort</a>
         <a href="#">Insertion sort</a>
         <a href="#">Selection sort</a>
     </div>
@@ -48,5 +89,6 @@
         </li>
     </div>
 </footer>
+<script src="/script/quick.js"></script>
 </body>
 </html>

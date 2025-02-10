@@ -4,8 +4,7 @@ const sortButton = document.getElementById('sort');
 const createButton = document.getElementById('create');
 const input= document.getElementById('user-input');
 const size=document.getElementById('size');
-
-
+const speedInput = document.getElementById('speed');
 
 let array = [];
 function createArray() {
@@ -38,6 +37,7 @@ function generateArray() {
 
 async function bubbleSort() {
     const numbers = document.getElementsByClassName('number');
+    const speed = parseInt(speedInput.value);
     for (let i = 0; i < array.length - 1; i++) {
         for (let j = 0; j < array.length - i - 1; j++) {
             if (array[j] > array[j + 1]) {
@@ -51,7 +51,7 @@ async function bubbleSort() {
                 numbers[j].classList.add('sorted');
                 numbers[j + 1].classList.add('sorted');
                 
-                await new Promise(resolve => setTimeout(resolve, 200));
+                await new Promise(resolve => setTimeout(resolve, speed));
                 
                 numbers[j].classList.remove('sorted');
                 numbers[j + 1].classList.remove('sorted');
