@@ -58,9 +58,13 @@ async function bubbleSort() {
             }
         }
     }
+    for (let i = 0; i < array.length; i++) {
+        numbers[i].classList.add('final');
+    }
 }
+
 createButton.addEventListener('click',createArray);
 generateButton.addEventListener('click', generateArray);
 sortButton.addEventListener('click', bubbleSort);
 
-generateArray();
+// generateArray();

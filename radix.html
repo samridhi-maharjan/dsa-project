@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick Sort</title>
+    <title>radix Sort</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,19 +13,19 @@
         </div>
     </header>
     <div class="intro">
-        <h3>QUICK SORT</h3>
+        <h3>RADIX SORT</h3>
         <p>
-            Quick Sort is a sorting algorithm based on the Divide and Conquer that picks an element as a pivot and partitions the given array around the picked pivot by placing the pivot in its correct position in the sorted array.
+            Radix Sort is a linear sorting algorithm that sorts elements by processing them digit by digit. It is an efficient sorting algorithm for integers or strings with fixed-size keys. 
+            Rather than comparing elements directly, Radix Sort distributes the elements into buckets based on each digit’s value. By repeatedly sorting the elements by their significant digits, from the least significant to the most significant, Radix Sort achieves the final sorted order.
         </p>
     </div>
     <div class="box">
         <div class="algorithm">
             <h4>Algorithm</h4><br>
             <ol>
-                <li> Select an element from the array as the pivot.</li><br>
-                <li>  Rearrange the array around the pivot. After partitioning, all elements smaller than the pivot will be on its left, and all elements greater than the pivot will be on its right. The pivot is then in its correct position, and we obtain the index of the pivot.</li><br>
-                <li>Recursively apply the same process to the two partitioned sub-arrays (left and right of the pivot).</li><br>
-                <li>The recursion stops when there is only one element left in the sub-array, as a single element is already sorted.</li><br>
+                <li> Start with the least significant digit (rightmost digit).</li><br>
+                <li> Sort the values based on the digit in focus by first putting the values in the correct bucket based on the digit in focus, and then put them back into array in the correct order.</li><br>
+                <li>Move to the next digit, and sort again, like in the step above, until there are no digits left.</li>
             </ol>
         </div>
         <div class="complexity">
@@ -37,17 +37,17 @@
                 </tr>
                 <tr>
                   <td>Best</td>
-                  <td>O(nlogn)</td>
-                  <td>O(logn)</td>
+                  <td>O(nk)</td>
+                  <td>O(n+k)</td>
                 </tr>
                 <tr>
                   <td>Worst</td>
-                  <td>O(n^2)</td>
-                  <td>O(n)</td>
+                  <td>O(nk)</td>
+                  <td>-</td>
                 </tr>
                 <tr>
                     <td>Average</td>
-                    <td>O(nlogn)</td>
+                    <td>O(nk)</td>
                     <td>-</td>
                   </tr>
               </table>
@@ -63,7 +63,7 @@
                 <button id="generate">Generate Array</button>
         </div>
         <label for="speed">Sorting Speed :max</label>
-        <input type="range" id="speed" min="10" max="10000" value="200">min
+        <input type="range" id="speed" min="10" max="1000" value="200">min
         <div class="container">
             <div class="array-container" id="array-container"></div>
         </div>
@@ -87,6 +87,6 @@
         </li>
     </div>
 </footer>
-<script src="/script/quick.js"></script>
+<script src="/script/radix.js"></script>
 </body>
 </html>

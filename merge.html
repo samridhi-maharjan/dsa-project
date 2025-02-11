@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick Sort</title>
+    <title>Merge Sort</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,19 +13,20 @@
         </div>
     </header>
     <div class="intro">
-        <h3>QUICK SORT</h3>
+        <h3>MERGE SORT</h3>
         <p>
-            Quick Sort is a sorting algorithm based on the Divide and Conquer that picks an element as a pivot and partitions the given array around the picked pivot by placing the pivot in its correct position in the sorted array.
+            The Merge Sort algorithm is a divide-and-conquer algorithm that sorts an array by first breaking it down into smaller arrays, and then building the array back together the correct way so that it is sorted.
         </p>
     </div>
     <div class="box">
         <div class="algorithm">
-            <h4>Algorithm</h4><br>
+            <h4>Algorithm</h4>
             <ol>
-                <li> Select an element from the array as the pivot.</li><br>
-                <li>  Rearrange the array around the pivot. After partitioning, all elements smaller than the pivot will be on its left, and all elements greater than the pivot will be on its right. The pivot is then in its correct position, and we obtain the index of the pivot.</li><br>
-                <li>Recursively apply the same process to the two partitioned sub-arrays (left and right of the pivot).</li><br>
-                <li>The recursion stops when there is only one element left in the sub-array, as a single element is already sorted.</li><br>
+                <li> If it is only one element in the list, consider it already 
+                    sorted, so return.</li>
+                <li> Divide the list recursively into two halves until it can no  
+                    more be divided.
+                <li>Merge the smaller lists into new list in sorted order.</li>
             </ol>
         </div>
         <div class="complexity">
@@ -33,17 +34,17 @@
                 <tr>
                   <th><b>complexity</b></th>
                   <th>Time</th>
-                  <th>Space</th>
+                  <th>Space</th>                 
                 </tr>
                 <tr>
                   <td>Best</td>
                   <td>O(nlogn)</td>
-                  <td>O(logn)</td>
+                  <td>O(n)</td>
                 </tr>
                 <tr>
                   <td>Worst</td>
-                  <td>O(n^2)</td>
-                  <td>O(n)</td>
+                  <td>O(nlogn)</td>
+                  <td>-</td>
                 </tr>
                 <tr>
                     <td>Average</td>
@@ -87,6 +88,6 @@
         </li>
     </div>
 </footer>
-<script src="/script/quick.js"></script>
+<script src="/script/merge.js"></script>
 </body>
 </html>

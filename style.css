@@ -46,6 +46,7 @@ header a{
     background-color: rgba(255, 139, 124, 0.226);
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     min-width: 360px;
+    min-height: 250px;
 }
 .details h4{
     text-align: center;
@@ -53,12 +54,12 @@ header a{
 }
 .details p{
     text-align: justify;
-    font-size: 12px;
-    margin: 5px 7px;
+    font-size: 14px;
+    margin: 10px 7px;
 }
 .details .btn{
     text-align: center;
-    margin: 3px 0px 10px 0px;
+    margin-top: auto;
 }
 .details .btn button{
     padding: 3px 4px;
@@ -67,9 +68,18 @@ header a{
     border: none;
     box-shadow:2px 3px rgba(109, 109, 109, 0.521);
     cursor: pointer;
+    height: 40px;
+    width: 100px;
 }
 button:active{
     transform:translateY(1px);
+}
+.details .btn button:hover{
+    background-color: rgba(248, 115, 62, 0.658);
+    color:white;
+}
+.details .btn button a{
+text-decoration: none;
 }
 /*footer*/
 footer{
@@ -110,7 +120,7 @@ footer .about li{
 }
 .number {
     margin: 5px;
-    padding: 100px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
     background-color: #A09BE7;
     color: #fff;
     border-radius: 5px;
@@ -202,7 +212,7 @@ footer .about li{
 }
 
 .visual .container {
-    margin-top: 20px;
+    margin-top: 0px;
     background-color: none;
 }
 table {
@@ -224,4 +234,16 @@ tr:nth-child(even) {
 }
 td {
     text-align:center;
+}
+.final {
+    background-color: green;
+    color: white;
+}
+.swapping {
+    background-color: orange;
+    transform: scale(1.2);
+}
+
+.sorted {
+    background-color: lightgreen;
 }
