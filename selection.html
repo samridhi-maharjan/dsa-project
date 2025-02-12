@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merge Sort</title>
+    <title>Selection Sort</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,20 +13,18 @@
         </div>
     </header>
     <div class="intro">
-        <h3>MERGE SORT</h3>
+        <h3>SELECTION SORT</h3>
         <p>
-            The Merge Sort algorithm is a divide-and-conquer algorithm that sorts an array by first breaking it down into smaller arrays, and then building the array back together the correct way so that it is sorted.
+            Selection Sort is a comparison-based sorting algorithm. It sorts an array by repeatedly selecting the smallest (or largest) element from the unsorted portion and swapping it with the first unsorted element. This process continues until the entire array is sorted.
         </p>
     </div>
     <div class="box">
         <div class="algorithm">
             <h4>Algorithm</h4>
             <ol>
-                <li> If it is only one element in the list, consider it already 
-                    sorted, so return.</li>
-                <li> Divide the list recursively into two halves until it can no  
-                    more be divided.
-                <li>Merge the smaller lists into new list in sorted order.</li>
+                <li> First we find the smallest element and swap it with the first element. This way we get the smallest element at its correct position..</li>
+                <li> Then we find the smallest among remaining elements (or second smallest) and swap it with the second element.
+                <li>We keep doing this until we get all elements moved to correct position.</li>
             </ol>
         </div>
         <div class="complexity">
@@ -65,6 +63,10 @@
         </div>
         <label for="speed">Sorting Speed :max</label>
         <input type="range" id="speed" min="10" max="10000" value="200">min
+        <div class="select">
+            <div class="index" id="selected">selected number</div>
+          <div class="index" id="minimum">min value</div>
+        </div>
         <div class="container">
             <div class="array-container" id="array-container"></div>
         </div>
@@ -88,6 +90,6 @@
         </li>
     </div>
 </footer>
-<script src="/script/merge.js"></script>
+<script src="/script/selection.js"></script>
 </body>
 </html>

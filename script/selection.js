@@ -45,42 +45,50 @@ async function quickSort(low = 0, high = array.length - 1) {
     }
 }
 
-async function partition(low, high) {
-    const pivot = array[high];
+async function selectionSort() {
     const numbers = document.getElementsByClassName('number');
-    let i = low - 1;
-    for (let j = low; j < high; j++) {
-        if (array[j] < pivot) {
-            i++;
-            const temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
 
-            numbers[i].innerText = array[i];
-            numbers[j].innerText = array[j];
+    for (let i = 0; i < array.length - 1; i++) {
+        let minIndex = i;
+        numbers[i].classList.add('selected'); 
+
+        for (let j = i + 1; j < array.length; j++) {
+            numbers[j].classList.add('checking'); 
+            await delay();
+
+            if (array[j] < array[minIndex]) {
+                numbers[minIndex].classList.remove('min'); 
+                minIndex = j;
+                numbers[minIndex].classList.add('min'); 
+            }
+
+            numbers[j].classList.remove('checking');
         }
+
+        if (minIndex !== i) {
+            [array[i], array[minIndex]] = [array[minIndex], array[i]];
+            numbers[i].innerText = array[i];
+            numbers[minIndex].innerText = array[minIndex];
+        }
+
+        numbers[minIndex].classList.remove('min'); 
+        numbers[i].classList.remove('selected');
+        numbers[i].classList.add('sorted'); 
+        await delay();
     }
-    const temp = array[i + 1];
-    array[i + 1] = array[high];
-    array[high] = temp;
 
-    numbers[i + 1].innerText = array[i + 1];
-    numbers[high].innerText = array[high];
-
-    numbers[i + 1].classList.add('sorted');
-    numbers[high].classList.add('sorted');
-    
-    await new Promise(resolve => setTimeout(resolve, 200));
-    
-    numbers[i + 1].classList.remove('sorted');
-    numbers[high].classList.remove('sorted');
-    
-    return i + 1;
+    highlightFinalSorted(); 
 }
-
-
+function delay() {
+    return new Promise(resolve => setTimeout(resolve, speedInput.value || 200));
+}
+function highlightFinalSorted() {
+    const numbers = document.getElementsByClassName('number');
+    for (let num of numbers) {
+        num.classList.add('sorted');
+    }
+}
+sortButton.addEventListener('click', () => selectionSort());
 createButton.addEventListener('click', createArray);
 generateButton.addEventListener('click', generateArray);
-sortButton.addEventListener('click', () => quickSort());
-
 generateArray();

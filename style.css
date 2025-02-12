@@ -71,6 +71,18 @@ header a{
     height: 40px;
     width: 100px;
 }
+#bubble_sort{
+    margin-top: 100px;
+}
+#selection_sort{
+    margin-top: 70px;
+}
+#radix_sort{
+    margin-top: 100px;
+}
+#quick_sort{
+    margin-top: 70px;
+}
 button:active{
     transform:translateY(1px);
 }
@@ -244,6 +256,47 @@ td {
     transform: scale(1.2);
 }
 
-.sorted {
-    background-color: lightgreen;
+.checking {
+    background-color: yellow;
+    transform: scale(1.1);
+    transition: background-color 0.3s, transform 0.3s;
 }
+
+.min {
+    background-color: orange;
+    transform: scale(1.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.selected {
+    background-color: pink;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sorted {
+    background-color: green !important;
+    color: white;
+    transition: background-color 0.5s ease-in-out;
+}
+#selected{
+    padding: 10px;
+    background-color: pink;
+    width: 60px;
+    border-radius: 6px;
+}
+#minimum{
+    padding: 10px;
+    background-color: orange;
+    width: 60px;
+    border-radius: 6px;
+    margin-left:10px;
+}
+.select{
+    display: flex;
+}
+.lsb {
+    background-color: pink;
+    font-weight: bold;
+    transition: background-color 0.3s, font-weight 0.3s;
+}
+
